@@ -1,6 +1,6 @@
 {
   "name": "mdopen",
-  "version": "0.3.0",
+  "version": "0.3.0-alpha.0",
   "description": "Render markdown to a self-contained HTML file — GFM tables, mermaid diagrams, one opinionated theme. `npx mdopen file.md`",
   "license": "MIT",
   "type": "module",
