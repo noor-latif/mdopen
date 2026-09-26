@@ -36,7 +36,7 @@ cat > ~/.local/share/applications/justmd.desktop <<DESK
 [Desktop Entry]
 Type=Application
 Name=justmd
-Exec=sh -c 'npx -y mdopen "%f" --open'
+Exec=sh -c 'npx -y justmd "%f" --open'
 Terminal=false
 MimeType=text/markdown;text/x-markdown;
 DESK
