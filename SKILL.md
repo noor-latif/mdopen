@@ -1,4 +1,4 @@
-# mdopen — agent skill
+# justmd — agent skill
 
 Render a markdown file to a **self-contained HTML file** — GitHub-flavored tables,
 mermaid diagrams, syntax-friendly theme. No network needed at view time.
@@ -12,9 +12,9 @@ documents. Do not use for editing.
 ## Usage
 
 ```sh
-npx mdopen <file.md>              # write <file>.html, print its path
-npx mdopen <file.md> -o out.html  # choose output path
-npx mdopen <file.md> --open       # also launch in the default browser
+npx justmd <file.md>              # write <file>.html, print its path
+npx justmd <file.md> -o out.html  # choose output path
+npx justmd <file.md> --open       # also launch in the default browser
 ```
 
 ## Contract
@@ -28,7 +28,7 @@ npx mdopen <file.md> --open       # also launch in the default browser
 ## Notes for agents
 
 - The output path is deterministic (`<input>.html` unless `-o`), so you can chain it:
-  `npx mdopen report.md && xdg-open report.html`.
+  `npx justmd report.md && xdg-open report.html`.
 - Mermaid blocks (` ```mermaid `) render as diagrams; malformed diagrams show
   mermaid's error text — not a tool failure, a source error.
 - If the file has no `# heading`, the output `<title>`/page header falls back to the

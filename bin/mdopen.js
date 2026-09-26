@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// mdopen — render markdown to a self-contained HTML file (GFM tables, mermaid diagrams).
-// Usage: mdopen <file.md> [-o out.html] [--open]
+// justmd — render markdown to a self-contained HTML file (GFM tables, mermaid diagrams).
+// Usage: justmd <file.md> [-o out.html] [--open]
 //   Default: writes <file>.html next to the input; prints the path.
 //   --open   also opens the result with the platform opener (xdg-open/open/start).
 import { ready, parse } from "markdown-wasm";
@@ -36,7 +36,7 @@ const TEMPLATE = `<!doctype html>
      makes the page readable at its natural size on a phone. -->
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="generator" content="mdopen">
+<meta name="generator" content="justmd">
 <title>__TITLE__</title>
 <style>
 __FONTS__
@@ -212,7 +212,7 @@ __BODY__
 
 const args = process.argv.slice(2);
 if (!args.length || args.includes("-h") || args.includes("--help")) {
-  console.error("usage: mdopen <file.md> [-o out.html] [--open]");
+  console.error("usage: justmd <file.md> [-o out.html] [--open]");
   process.exit(args.length ? 0 : 1);
 }
 const doOpen = args.includes("--open");

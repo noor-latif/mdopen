@@ -1,11 +1,11 @@
 {
-  "name": "mdopen",
-  "version": "0.3.0-alpha.0",
-  "description": "Render markdown to a self-contained HTML file — GFM tables, mermaid diagrams, one opinionated theme. `npx mdopen file.md`",
+  "name": "justmd",
+  "version": "0.3.0-alpha.2",
+  "description": "Render markdown to a self-contained HTML file — GFM tables, mermaid diagrams, one opinionated theme. npx justmd file.md",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "mdopen": "bin/mdopen.js"
+    "justmd": "bin/mdopen.js"
   },
   "files": [
     "bin/",

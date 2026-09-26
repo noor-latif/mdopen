@@ -1,4 +1,4 @@
-# mdopen
+# justmd
 
 Render markdown to a **self-contained HTML file** — GitHub-flavored tables, mermaid
 diagrams, syntax-highlighted code, one opinionated dark theme. No network needed at
@@ -7,15 +7,15 @@ view time; the output travels anywhere (phone, chat attachment, air-gapped machi
 ## Usage
 
 ```sh
-npx mdopen <file.md>              # write <file>.html, print its path
-npx mdopen <file.md> -o out.html  # choose output path
-npx mdopen <file.md> --open       # also open in the default browser
+npx justmd <file.md>              # write <file>.html, print its path
+npx justmd <file.md> -o out.html  # choose output path
+npx justmd <file.md> --open       # also open in the default browser
 ```
 
 ## Why
 
 Every existing markdown viewer either needs a vault (Obsidian), renders tables
-wrong (several Qt/GTK apps), or requires network for diagrams. `mdopen` does one
+wrong (several Qt/GTK apps), or requires network for diagrams. `justmd` does one
 thing: markdown in, a single portable HTML file out, using the same md4c parser
 family the big renderers use.
 
@@ -32,16 +32,16 @@ family the big renderers use.
 Make it the default handler for double-clicking `.md` files:
 
 ```sh
-cat > ~/.local/share/applications/mdopen.desktop <<DESK
+cat > ~/.local/share/applications/justmd.desktop <<DESK
 [Desktop Entry]
 Type=Application
-Name=mdopen
+Name=justmd
 Exec=sh -c 'npx -y mdopen "%f" --open'
 Terminal=false
 MimeType=text/markdown;text/x-markdown;
 DESK
 update-desktop-database ~/.local/share/applications
-xdg-mime default mdopen.desktop text/markdown
+xdg-mime default justmd.desktop text/markdown
 ```
 
 ## Theme
