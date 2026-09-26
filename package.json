@@ -1,0 +1,23 @@
+{
+  "name": "mdopen",
+  "version": "0.3.0",
+  "description": "Render markdown to a self-contained HTML file — GFM tables, mermaid diagrams, one opinionated theme. `npx mdopen file.md`",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mdopen": "./bin/mdopen.js"
+  },
+  "files": [
+    "bin/",
+    "SKILL.md",
+    "README.md"
+  ],
+  "dependencies": {
+    "highlight.js": "^11.12.0",
+    "markdown-wasm": "^1.2.0",
+    "mermaid": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
